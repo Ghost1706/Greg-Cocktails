@@ -4,7 +4,9 @@ import { useContext, useState } from "react";
 const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  return <AppContext.Provider value={loading}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={{ loading }}>{children}</AppContext.Provider>
+  );
 };
 
 export const useGlobalContext = () => {

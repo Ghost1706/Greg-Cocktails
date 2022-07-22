@@ -34,21 +34,11 @@ const BrandSpan = styled.span`
   letter-spacing: 2px;
   font-style: italic;
 `;
-const NavLinks = styled.div`
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  @media screen and (max-width: 480px) {
-    display: none;
-  }
-`;
-const NavLink = styled.a`
-  text-decoration: none;
-  color: black;
-`;
+
 const Login = styled.a`
   color: green;
   font-size: 1.1rem;
+  letter-spacing: 2px;
   @media screen and (max-width: 480px) {
     font-size: 1.5rem;
   }
@@ -61,10 +51,6 @@ const Navbar = () => {
           <BrandName>Greg's</BrandName>
           <BrandSpan>Cocktails</BrandSpan>
         </BrandWrapper>
-        <NavLinks>
-          <NavLink>Home</NavLink>
-          <NavLink>About</NavLink>
-        </NavLinks>
         <Login>Login</Login>
       </Wrapper>
     </Container>
