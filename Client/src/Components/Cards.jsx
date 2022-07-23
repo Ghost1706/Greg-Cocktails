@@ -9,12 +9,17 @@ const Container = styled.div`
   padding: 0 2rem;
   flex-wrap: wrap;
   gap: 5px;
+  background-color: ${({ theme }) => theme.bg};
 `;
 const Text = styled.h2`
   text-transform: capitalize;
   font-weight: 300;
   text-align: center;
   letter-spacing: 2px;
+  color: ${({ theme }) => theme.text};
+`;
+const Matches = styled.div`
+  height: calc(100vh - 170px);
 `;
 const Cards = () => {
   const { cocktails, loading } = useGlobalContext();
@@ -23,7 +28,11 @@ const Cards = () => {
     return <Loader />;
   }
   if (cocktails.length < 1) {
-    return <Text>no cocktails matched your search criteria</Text>;
+    return (
+      <Matches>
+        <Text>no cocktails matched your search criteria</Text>;
+      </Matches>
+    );
   }
   return (
     <React.Fragment>

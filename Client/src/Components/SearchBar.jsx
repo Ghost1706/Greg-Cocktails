@@ -4,11 +4,12 @@ import { useGlobalContext } from "./Context";
 
 const Container = styled.div`
   display: block;
-  width: 50%;
-  margin-left: 25%;
+  width: 100%;
+  padding: 0 25%;
+  background-color: ${({ theme }) => theme.bg};
   @media screen and (max-width: 480px) {
     width: 100vw;
-    margin: 0;
+    padding: 0;
   }
 `;
 const Wrapper = styled.div`
@@ -23,8 +24,9 @@ const Input = styled.input`
   font-size: 1rem;
   font-style: italic;
   width: 100%;
-  color: #202020cc;
-  border: none;
+  color: ${({ theme }) => theme.text};
+  background-color: ${({ theme }) => theme.input};
+  border: 1px solid green;
   border-radius: 10px;
 `;
 

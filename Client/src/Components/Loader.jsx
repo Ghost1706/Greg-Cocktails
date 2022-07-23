@@ -3,11 +3,12 @@ import { Bars } from "react-loader-spinner";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: calc(100vh - 60px);
+  height: calc(100vh);
   display: flex;
   align-content: center;
   justify-content: center;
   align-items: center;
+  background-color: ${({ theme }) => theme.bg};
 `;
 const Loader = () => {
   return (

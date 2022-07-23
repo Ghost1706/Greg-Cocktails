@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 
 const Container = styled.nav`
   display: block;
-  background-color: white;
+  background-color: ${({ theme }) => theme.nav};
   box-shadow: 0px 7px 9px -3px rgba(0, 0, 0, 0.63);
   -webkit-box-shadow: 0px 7px 9px -3px rgba(0, 0, 0, 0.63);
   -moz-box-shadow: 0px 7px 9px -3px rgba(0, 0, 0, 0.63);
@@ -43,7 +44,21 @@ const Login = styled.a`
     font-size: 1.5rem;
   }
 `;
-const Navbar = () => {
+const Right = styled.div`
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+`;
+const Btn = styled.button`
+  background-color: transparent;
+  border: none;
+`;
+const ThemeIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-items: center;
+`;
+const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <Container>
       <Wrapper>
@@ -51,7 +66,20 @@ const Navbar = () => {
           <BrandName>Greg's</BrandName>
           <BrandSpan>Cocktails</BrandSpan>
         </BrandWrapper>
-        <Login>Login</Login>
+        <Right>
+          <ThemeIcon>
+            <Btn onClick={() => setDarkMode(!darkMode)}>
+              {darkMode ? (
+                <BsFillSunFill
+                  style={{ color: "yellow", fontSize: "1.5rem" }}
+                />
+              ) : (
+                <BsFillMoonFill style={{ fontSize: "1.5rem" }} />
+              )}
+            </Btn>
+          </ThemeIcon>
+          <Login>Login</Login>
+        </Right>
       </Wrapper>
     </Container>
   );

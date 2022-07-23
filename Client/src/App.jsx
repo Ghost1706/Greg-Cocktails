@@ -1,11 +1,11 @@
 import React from "react";
-
 import SearchBar from "./Components/SearchBar";
 import Cards from "./Components/Cards";
 import styled from "styled-components";
 
 const Container = styled.div`
-  background-color: #f0efeff8;
+  /* background-color: ${({ theme }) => theme.bg}; */
+  height: auto;
 `;
 
 const App = () => {

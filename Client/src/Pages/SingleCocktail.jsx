@@ -76,9 +76,14 @@ const SingleCocktail = () => {
     flex-direction: column;
     justify-content: center;
     align-content: space-between;
+    background-color: ${({ theme }) => theme.bg};
+    height: calc(100vh - 60px);
+
     gap: 2rem;
     @media screen and (max-width: 480px) {
       gap: 0;
+      padding-bottom: 2rem;
+      height: auto;
     }
   `;
   const Wrapper = styled.div`
@@ -87,7 +92,6 @@ const SingleCocktail = () => {
     width: 70%;
     align-self: center;
     justify-self: center;
-    background-color: #ffffffef;
     box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
     -webkit-box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
     -moz-box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
@@ -116,6 +120,7 @@ const SingleCocktail = () => {
     line-height: 1.8;
     font-weight: 300;
     letter-spacing: 2px;
+    color: ${({ theme }) => theme.text};
     margin-bottom: 0.7rem;
   `;
   const DrinkData = styled.span`
