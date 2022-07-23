@@ -29,7 +29,7 @@ const Cards = () => {
     <React.Fragment>
       <Container>
         {cocktails.map((cocktail) => {
-          const { id, name, image, glass, category, type } = cocktail;
+          const { id } = cocktail;
           return <Card key={id} {...cocktail} />;
         })}
       </Container>
