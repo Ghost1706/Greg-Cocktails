@@ -10,4 +10,5 @@ export const lightTheme = {
   text: "black",
   nav: "white",
   input: "transparent",
+  line: "green",
 };

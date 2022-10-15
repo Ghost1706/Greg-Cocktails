@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
+import { AiOutlineLogin } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Container = styled.nav`
   display: block;
@@ -36,7 +38,7 @@ const BrandSpan = styled.span`
   font-style: italic;
 `;
 
-const Login = styled.a`
+const Login = styled(Link)`
   color: green;
   font-size: 1.1rem;
   letter-spacing: 2px;
@@ -78,7 +80,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               )}
             </Btn>
           </ThemeIcon>
-          <Login>Login</Login>
+          <Login to="/Login">
+            <AiOutlineLogin style={{ fontSize: "1.5rem" }} />
+          </Login>
         </Right>
       </Wrapper>
     </Container>

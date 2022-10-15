@@ -7,6 +7,7 @@ import Loader from "./Loader";
 const Container = styled.div`
   display: flex;
   padding: 0 2rem;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 5px;
   background-color: ${({ theme }) => theme.bg};

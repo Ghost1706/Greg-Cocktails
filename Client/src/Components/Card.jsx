@@ -7,7 +7,7 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 0.3rem;
-  width: 30vw;
+  width: 18%;
   background-color: ${({ theme }) => theme.bg};
   border-radius: 7px;
   border: 1px solid green;
@@ -23,7 +23,7 @@ const CardTop = styled.div`
   flex: 1;
 `;
 const CardBody = styled.div`
-  padding: 2rem 1rem;
+  padding: 0.75rem;
   flex: 1;
   background-color: ${({ theme }) => theme.bg};
 `;
